@@ -11,9 +11,11 @@ export function SocketProvider({ id, children }) {
 
     const [socket, setSocket] = useState()
 
+    const HOST = process.env.HOST || "http://localhost:5000";
+
     useEffect(() => {
         const newSocket = io(
-            'http://localhost:5000',
+             HOST,
             {
                 query: { id },
                 withCredentials: true,
@@ -25,7 +27,7 @@ export function SocketProvider({ id, children }) {
         setSocket(newSocket)
 
         return () => newSocket.close()
-    }, [id])
+    }, [id, HOST])
     
     return (
         <SocketContext.Provider value={socket}>
