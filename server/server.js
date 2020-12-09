@@ -1,16 +1,8 @@
-// const io = require("socket.io")(5000, {
-//   cors: {
-//     origin: "https://localhost:3000",
-//     methods: ["GET", "POST"],
-//     allowedHeaders: ["my-custom-header"],
-//     credentials: true
-//   }
-// });
+const PORT = 5000 ? 5000 : 5432
 
-
-const io = require("socket.io")(5000, {
+const io = require("socket.io")(PÒRT, {
   cors: {
-    origin: "http://localhost:3000",
+    origin: "http://localhost:3000" || process.env.URL,
     methods: ["GET", "POST"],
     credentials: true
   }
