@@ -1,6 +1,6 @@
-const PORT = 5000 ? 5000 : 5432
+const port = process.env.PORT || 5000;
 
-const io = require("socket.io")(PÒRT, {
+const io = require("socket.io")(port, {
   cors: {
     origin: "http://localhost:3000" || process.env.URL,
     methods: ["GET", "POST"],
@@ -8,7 +8,7 @@ const io = require("socket.io")(PÒRT, {
   }
 });
 
-
+console.log(PORT)
 
 io.on('connection', socket => {
     const id = socket.handshake.query.id
