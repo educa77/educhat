@@ -1,12 +1,13 @@
 const port = process.env.PORT || 5000;
 
-const io = require("socket.io")(port, {
+
+const io = require("socket.io")(5000, {
   cors: {
     origin: "http://localhost:3000" || process.env.URL,
     methods: ["GET", "POST"],
     credentials: true
   }
-});
+}) || require("socket.io")(process.env.PORT);
 
 console.log(PORT)
 
