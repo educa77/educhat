@@ -5,7 +5,7 @@ import Dashboard from './Dahboard';
 import { ContactsProvider } from '../context/ContactsProvider';
 import { ConversationsProvider } from '../context/ConversationsProvider';
 import { SocketProvider } from '../context/SocketProvider';
-
+require("dotenv").config();
 
 function App() {
 
