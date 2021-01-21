@@ -1,11 +1,11 @@
-## Edu Chat
+# Edu Chat
 
 Server deployed to Heroku and Client side to Vercel. 
 
 https://edu-chat-vercel.vercel.app/
 
 
-# Instrucciones de uso del chat
+## Instrucciones de uso del chat
 
 1- Descargar una extension en Chrome para permitir el uso de cors. https://chrome.google.com/webstore/detail/allow-cors-access-control/lhobafahddgcelffkeicbaginigeejlf?hl=es
 
